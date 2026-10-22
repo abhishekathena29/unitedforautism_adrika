@@ -1,0 +1,137 @@
+rules_version = '2';
+
+// Best-effort reconstruction of access control for this app. There were no
+// SQL/RLS files in the original Supabase project to port from, so these
+// rules were derived from what lib/services/data_service.dart and
+// lib/state/auth_provider.dart actually do. Review before shipping to
+// production — in particular the "public read" collections below are
+// intentionally open (this app has no private-space concept today).
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(field) {
+      return signedIn() && resource.data[field] == request.auth.uid;
+    }
+
+    // ── Community content: readable by anyone, writable by any signed-in
+    // user (including anonymous/guest sessions), never updated/deleted by
+    // the app itself.
+    match /spaces/{id} {
+      allow read: if true;
+      allow write: if false; // managed content, not user-created
+    }
+
+    match /posts/{id} {
+      allow read: if true;
+      allow create: if signedIn();
+      allow update, delete: if false; // app never edits/removes posts
+    }
+
+    match /comments/{id} {
+      allow read: if true;
+      allow create: if signedIn();
+      allow update, delete: if false;
+    }
+
+    match /articles/{id} {
+      allow read: if true;
+      allow create: if signedIn();
+      allow update, delete: if false;
+    }
+
+    match /events/{id} {
+      allow read: if true;
+      allow create: if signedIn();
+      allow update, delete: if false;
+    }
+
+    match /calm_kit_items/{id} {
+      allow read: if true;
+      allow create: if signedIn();
+      allow update, delete: if isOwner('owner_id');
+    }
+
+    match /therapists/{id} {
+      allow read: if true;
+      allow write: if false; // console/admin managed
+    }
+
+    match /community_guidelines/{id} {
+      allow read: if true;
+      allow write: if false; // console/admin managed
+    }
+
+    match /emotional_prompts/{id} {
+      allow read: if true;
+      allow write: if false; // console/admin managed
+    }
+
+    match /daily_affirmations/{id} {
+      allow read: if true;
+      allow write: if false; // console/admin managed
+    }
+
+    match /emotional_shares/{id} {
+      allow read: if true;
+      allow create: if signedIn();
+      allow update, delete: if false;
+    }
+
+    match /emotional_replies/{id} {
+      allow read: if true;
+      allow create: if signedIn();
+      allow update, delete: if false;
+    }
+
+    // ── Toggle / junction collections: any signed-in user (incl. guests,
+    // who are backed by Firebase Anonymous Auth) may create or remove their
+    // own like/vote/rsvp/save/pin/hold-space doc.
+    match /post_likes/{id} { allow read, write: if signedIn(); }
+    match /article_likes/{id} { allow read, write: if signedIn(); }
+    match /calm_kit_votes/{id} { allow read, write: if signedIn(); }
+    match /calm_kit_pins/{id} { allow read, write: if signedIn(); }
+    match /event_rsvps/{id} { allow read, write: if signedIn(); }
+    match /saved_posts/{id} { allow read, write: if signedIn(); }
+    match /hold_spaces/{id} { allow read, write: if signedIn(); }
+    match /calm_kit_edits/{id} { allow read, write: if signedIn(); }
+    match /calm_kit_deletes/{id} { allow read, write: if signedIn(); }
+
+    // ── Per-user data: only the owning account may read/write it.
+    match /profiles/{userId} {
+      allow read: if true; // member directory / post authorship is public
+      allow write: if signedIn() && request.auth.uid == userId;
+    }
+
+    match /privacy_settings/{userId} {
+      allow read, write: if signedIn() && request.auth.uid == userId;
+    }
+
+    match /notification_settings/{userId} {
+      allow read, write: if signedIn() && request.auth.uid == userId;
+    }
+
+    match /notifications/{id} {
+      allow read, update: if isOwner('user_id');
+      allow create, delete: if false; // nothing in the app creates these yet
+    }
+
+    match /issue_reports/{id} {
+      allow create: if signedIn();
+      allow read, update, delete: if false; // admin-only
+    }
+
+    match /connections/{id} {
+      allow read: if signedIn();
+      allow create: if signedIn() &&
+          request.resource.data.requester_id == request.auth.uid;
+      allow delete: if signedIn() &&
+          (resource.data.requester_id == request.auth.uid ||
+           resource.data.recipient_id == request.auth.uid);
+      allow update: if false;
+    }
+  }
+}

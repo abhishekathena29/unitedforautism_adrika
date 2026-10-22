@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1069827182187",
+    "project_id": "united-for-autism-87ca5",
+    "storage_bucket": "united-for-autism-87ca5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1069827182187:android:eb9eeb2051a4140bd06b2e",
+        "android_client_info": {
+          "package_name": "com.unitedforautism.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApoifVYMSWczbe0sEUGXI3_kmM3j-xsMk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

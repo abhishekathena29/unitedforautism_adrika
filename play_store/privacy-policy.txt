@@ -1,0 +1,142 @@
+PRIVACY POLICY
+United For Autism
+Effective date: [DD Month YYYY]
+
+This Privacy Policy explains how [Developer / Organisation name] ("we", "us", "our") collects, uses, stores and protects your information when you use the United For Autism mobile app (the "App"). By using the App, you agree to the practices described here.
+
+
+1. WHO WE ARE
+
+The App is operated by [Developer / Organisation name], [postal address]. If you have any questions about this policy or your data, contact us at [privacy email].
+
+
+2. INFORMATION WE COLLECT
+
+Information you give us
+
+- Account details: your name, email address and password. We use these to create your account, sign you in and reset your password. Your password is handled securely by our authentication provider, and we never see it in plain text.
+
+- Profile details (optional): display name, role (for example parent, caregiver or therapist), city and bio. We use these to show your profile to other members and help families connect.
+
+- Content you post: posts, replies, comments, articles, events, Calm Kit items, and Emotional Support shares and replies. We use this to publish your content in the community and display it to other members.
+
+- Activity in the App: likes, saved posts, RSVPs, votes, pinned items and connections with other members. We use this to provide these features and show your saved items and stats.
+
+- Settings: your privacy and notification preferences. We use these to respect your choices about visibility and notifications.
+
+- Support requests: the issue type, subject and details you send through "Report an issue". We use these to investigate and fix problems and to respond to you.
+
+Information created automatically
+
+- Account identifier: a unique user ID assigned by our authentication provider that links your account to your content.
+
+- Timestamps: the date and time content is created.
+
+- On-device storage: the App stores some preferences and a random identifier on your device. The identifier is used to record anonymous reactions, such as "holding space" for an Emotional Support share. It is not linked to your name or email.
+
+- Technical data: our hosting provider (Google Firebase) may process limited technical information, such as IP address and device or browser details, to deliver the service securely and prevent abuse.
+
+Anonymous content
+
+When you post anonymously, or share in the Emotional Support section, your name and user ID are not stored with that content. Other members cannot see who wrote it, and we cannot link it back to your account.
+
+Sensitive information
+
+Because the App is about autism and caregiving, you may choose to share information about your own or your child's health, diagnosis or wellbeing. Please share only what you are comfortable making visible to the community, and avoid posting details that could identify a child, such as their full name, school or photos. We use this content only to display it in the App.
+
+What we do not collect
+
+- We do not collect your precise or approximate device location.
+- We do not access your contacts, photos, camera or microphone.
+- We do not use advertising identifiers and do not show ads.
+- We do not collect payment information.
+
+
+3. HOW WE USE YOUR INFORMATION
+
+- To provide, operate and maintain the App and its features
+- To create and manage your account
+- To display your profile and content to other members, according to your settings
+- To moderate content and enforce our Community Guidelines
+- To respond to support requests and send important service messages, such as password resets
+- To keep the App safe and secure and to prevent fraud and abuse
+- To comply with legal obligations
+
+We do not sell your personal information, and we do not use it for advertising.
+
+
+4. WHAT OTHER MEMBERS CAN SEE
+
+United For Autism is a community. Content you post that is not anonymous is visible to other members together with your display name. Depending on your privacy settings, your profile may also be visible, including your role, city and bio, and you may appear in the members directory and in search. You can change these settings at any time in Settings > Privacy.
+
+
+5. HOW WE SHARE INFORMATION
+
+We share information only in these cases:
+
+- Service providers: we use Google Firebase (Firebase Authentication and Cloud Firestore), provided by Google LLC, to host data and authenticate users. Google processes this data on our behalf under its terms. See Firebase's privacy information at https://firebase.google.com/support/privacy
+
+- Legal reasons: when we must disclose information to comply with the law, a court order or a lawful request, or to protect the safety, rights or property of our users or others.
+
+- Business transfers: if the App is transferred to another organisation, your information may move with it, and it will remain covered by a policy at least as protective as this one.
+
+Links in the App, such as articles on external websites, are governed by those websites' own privacy policies.
+
+
+6. DATA STORAGE AND SECURITY
+
+Your data is stored on Google Cloud infrastructure through Firebase. Servers may be located outside your country. All data sent between the App and our servers is encrypted in transit using HTTPS/TLS. We use access controls and security rules to limit access to your data. However, no method of storage or transmission is completely secure, and we cannot guarantee absolute security.
+
+
+7. DATA RETENTION
+
+We keep your account information and content for as long as your account is active. When you delete your account, we delete your account, profile and the content linked to it within [30] days, except where we must keep limited information for legal, security or fraud-prevention reasons.
+
+Anonymous content is not linked to your account, so it cannot be identified as yours and may remain in the App after your account is deleted. Support requests may be kept for up to [12] months.
+
+
+8. DELETING YOUR ACCOUNT AND DATA
+
+You can delete your account at any time:
+
+- In the App: go to Profile > Delete account and confirm.
+- On the web: visit [account deletion URL], or email [privacy email] from the email address on your account with the subject "Delete my account".
+
+You can also delete individual posts and items that you created from within the App without deleting your account.
+
+
+9. YOUR RIGHTS AND CHOICES
+
+Depending on where you live, you may have the right to:
+
+- Access the personal data we hold about you
+- Correct inaccurate data. You can edit your profile in the App at any time.
+- Delete your data
+- Object to or restrict certain processing
+- Receive a copy of your data in a portable format
+- Withdraw consent at any time, where we rely on consent
+- Complain to your local data protection authority
+
+To exercise any of these rights, email [privacy email]. We will respond within the time required by applicable law.
+
+
+10. CHILDREN'S PRIVACY
+
+The App is intended for parents, caregivers and professionals aged 18 and over. It is not directed at children, and we do not knowingly collect personal information from anyone under 18. If you believe a child has created an account, contact us and we will delete it. Please do not post information that could identify your child.
+
+
+11. NOT MEDICAL ADVICE
+
+Content in the App, including community posts, articles and therapist listings, is for general information and peer support only. It is not a substitute for professional medical advice, diagnosis or treatment.
+
+
+12. CHANGES TO THIS POLICY
+
+We may update this Privacy Policy from time to time. When we do, we will update the effective date above. If the changes are significant, we will also notify you in the App. Continuing to use the App after changes take effect means you accept the updated policy.
+
+
+13. CONTACT US
+
+[Developer / Organisation name]
+[Postal address]
+Email: [privacy email]
